@@ -5,10 +5,12 @@
 #include "process_producer.h"
 #include "Sorter.h"
 #include "Calculation.h"
+#include "ShortestJobFirst.h"
 //TODO: CONGREGATE DEFINE DEFINTIONS IN OWN HEADERFILE
 
 void printProcessTracker();
 void printFCFSOrder(struct process* plist);
+void shortestJobFirst(struct process* o_plist); //might be wrong as well
 
 int main(){
 	int seed = time(NULL);
@@ -23,6 +25,8 @@ int main(){
 	printProcessTracker();
 	printFCFSOrder(copy_list);
 	RoundRobin(list);
+	shortestJobFirst(list); //might be wrong statement here.
+
 	return 1;
 }
 
