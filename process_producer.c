@@ -11,7 +11,7 @@ void PrintProcessList(struct process process_list[]){
 }
 
 void CreateProcesses(struct process** process_list){
-	char alphabet[26] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char alphabet[36] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
 	float arrival_time; // [0 - 99]
 	float service_time; // [0.1 - 10]
 	int priority; // [1 - 4]

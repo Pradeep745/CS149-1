@@ -31,8 +31,8 @@ float calAverageResponse(struct process plist[], int size) {
 	int incomplete_process = 0;
 	for (int i = 0; i < size; i++) {
 		// Response time is the actual starting time to when the first output is produced
-		if(plist[i].end_time > plist[i].arrival_time){
-		responseTime += plist[i].end_time - plist[i].actual_start_time;
+		if(plist[i].actual_start_time >= plist[i].arrival_time){
+		responseTime += plist[i].actual_start_time - plist[i].arrival_time;
 		}
 		else incomplete_process++;
 	}
