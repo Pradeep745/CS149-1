@@ -11,7 +11,7 @@ void PreHFPA(struct process* o_plist){ //original plist. Gonna use copy so the a
 	int queue[NUM_PROCESS] = {0};
 	int start_time_counter[NUM_PROCESS] = {0};
 	int time_waited[NUM_PROCESS] = {0};
-	int total_waiting_time;
+	int total_waiting_time = 0;
 	int available_service = 0;
 	int quanta;
 	int head = 0; //start at beginning
